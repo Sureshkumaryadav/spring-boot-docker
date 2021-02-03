@@ -18,14 +18,13 @@
 
 pipeline {
 
-    agent any
-    tools {
-        maven 'Maven_3.6.3' 
-    }
+   
+ 
     stages {
        stage('SCM Checkout'){
-      
-      git 'https://github.com/Sureshkumaryadav/spring-boot-docker'
+          steps {
+             git 'https://github.com/Sureshkumaryadav/spring-boot-docker'
+          }
     } 
         stage('Compile stage') {
             steps {
