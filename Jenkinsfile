@@ -1,19 +1,24 @@
-node{
-   stage('SCM Checkout'){
+pipeline {
+
+    agent any
+    tools {
+        maven 'Maven_3.6.3' 
+    }
+    stages {
+       stage('SCM Checkout'){
       
       git 'https://github.com/Sureshkumaryadav/spring-boot-docker'
     } 
-   
-    stage('Compile-Package'){
-       //Get maven home path
-       //def mvnHome = tool name: 'maven', type: 'maven'
-       //sh 'mvn package'
-        //Get maven home path
-       // def mvnHome = tool name: 'maven', type: 'maven'
-        //sh "${mvnHome}/bin/mvn package"
-        withMaven(maven : 'apache-maven-3.6.3') {
-                bat'mvn clean compile'
-            }
+        stage('Compile stage') {
+            steps {
+                bat "mvn clean compile" 
+        }
     }
+
+        
+
+  }
+
 }
+
 
