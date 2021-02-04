@@ -13,6 +13,10 @@ public class SpringBootDockerApplication {
 	public String getMessage() {
 		return "Welcome to JavaTechie..!!";
 	}
+	@GetMapping("/message")
+	public String getMessage() {
+		return "Welcome to JavaTechie..!!";
+	}
 	@GetMapping("/jenkinsmessage")
 	public String jenkins() {
 		return "Welcome to JavaTechie..!!";
