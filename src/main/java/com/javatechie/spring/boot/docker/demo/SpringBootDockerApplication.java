@@ -11,16 +11,16 @@ public class SpringBootDockerApplication {
 
 	@GetMapping("/message")
 	public String getMessage() {
-		return "Welcome to JavaTechie..!!";
+		return "Welcome to aws devops world";
 	}
 	
 	@GetMapping("/jenkinsmessage")
 	public String jenkins() {
-		return "Welcome to JavaTechie..!!";
+		return "Welcome to aws devops world with jenkins";
 	}
 	@GetMapping("/jenkinsmessage2")
 	public String third() {
-		return "Welcome to JavaTechie..!!";
+		return "Welcome to aws devops world with jenkins as third message";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDockerApplication.class, args);
