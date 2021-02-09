@@ -13,10 +13,7 @@ public class SpringBootDockerApplication {
 	public String getMessage() {
 		return "Welcome to aws devops world";
 	}
-	@GetMapping("/enjoy")
-	public String CheersForEnglandWin() {
-		return "BJP Controlled of india lost to england";
-	}
+
 	@GetMapping("/jenkinsmessage")
 	public String jenkins() {
 		return "Welcome to aws devops world with jenkins";
